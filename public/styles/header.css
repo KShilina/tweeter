@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  height: 520px;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 140px;
+  background-color: #f5d5b3;
+  background-image: url("https://www.transparenttextures.com/patterns/crossword.png");
+}
+.user-name {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #FFFFFF;
+}
