@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/all-tweets.css" type="text/css" />
 
     <!-- External Font Awesome library -->
     <link
@@ -38,7 +39,10 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
-    <script type="text/javascript" src="./scripts/composer-char-counter.js"></script>
+    <script
+      type="text/javascript"
+      src="./scripts/composer-char-counter.js"
+    ></script>
   </head>
 
   <body>
@@ -66,7 +70,6 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form id="tweet-form" action="/tweets" method="POST">
-          <!-- <label for="tweet-text">What are you humming about?</label> -->
           <textarea
             name="text"
             id="tweet-text"
@@ -78,6 +81,33 @@
           </div>
         </form>
       </section>
+
+      <article class="tweet">
+        <header>
+          <span>
+            <i class="fa-regular fa-face-smile"> <span> Newton </span> </i>
+          </span>
+          <span> @Sirisaac </span>
+        </header>
+        <form id="tweet-form" action="/tweets" method="POST">
+          <textarea
+            name="text"
+            id="tweet-text"
+            placeholder="If I have seen further it is by standing on the shoulders of giants"
+          ></textarea>
+        </form>
+
+        <footer>
+          <div class="tweet-date">
+            <span>10 days ago</span>
+            <span class="icon">
+              <i class="fa-solid fa-flag"></i>
+              <i class="fa-solid fa-repeat"></i>
+              <i class="fa-solid fa-heart"></i>
+            </span>
+          </div>
+        </footer>
+      </article>
     </main>
     <footer></footer>
   </body>
