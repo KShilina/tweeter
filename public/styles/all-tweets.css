@@ -2,6 +2,7 @@ article {
   border: solid;
   margin-top: 50px;
   border-width: thick 5px;
+  padding: 1em;
 }
 
 article.tweet:hover{
@@ -16,25 +17,38 @@ article.tweet:hover{
   color: orange;
 }
 
-.tweet-date {
+article.tweet footer{
   display: flex;
   justify-content: space-between;
-  margin-top: 15px;
-  padding-bottom: 20px;
-  padding-right: 15px;
-  padding-left: 15px;
 }
 
 article.tweet header{
   display: flex;
   justify-content: space-between;
-  margin-top: 15px;
-  margin-right: 15px;
-  margin-left: 15px;
-  margin-bottom: 50px;
+  align-items: center;
 }
+
+article.tweet header div {
+display: flex;
+align-items: center;
+}
+
+article.tweet header div img{
+  margin-right: 0.5em;
+}
+
 
 #tweet-text {
   margin-left: 15px;
+}
+
+article.tweet p {
+  border-bottom: 7px solid grey;
+  padding: 1em;
+}
+
+article.tweet .user-name {
+  opacity: 0.4;
+  color:grey;
 }
 
