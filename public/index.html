@@ -38,7 +38,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="./scripts/client.js"></script>
     <script
       type="text/javascript"
       src="./scripts/composer-char-counter.js"
@@ -59,7 +59,7 @@
 
     <header class="header">
       <div>
-        <img src="/images/profile-hex.png" />
+        <img src="/images/profile-hex.png" alt="profile picture" />
       </div>
       <br />
       <div class="user-name"><strong>Ekaterina</strong> Shilina</div>
@@ -81,28 +81,7 @@
           </div>
         </form>
       </section>
-
-      <article class="tweet">
-        <header>
-          <div>
-            <img src="https://i.imgur.com/nlhLi3I.png" />
-            <span>Newton</span>
-          </div>
-          <span class="user-name"> @Sirisaac </span>
-        </header>
-        <p>
-          If I have seen further it is by standing on the shoulders of giants
-        </p>
-
-        <footer class="tweet-date">
-            <span>10 days ago</span>
-            <span class="icon">
-              <i class="fa-solid fa-flag"></i>
-              <i class="fa-solid fa-repeat"></i>
-              <i class="fa-solid fa-heart"></i>
-            </span>
-        </footer>
-      </article>
+      <section id="tweets-container"></section>
     </main>
     <footer></footer>
   </body>
