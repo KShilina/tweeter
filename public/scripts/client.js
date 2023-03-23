@@ -32,7 +32,7 @@ $(document).ready(() => {
       // calls createTweetElement for each tweet
       let $tweet = createTweetElement(tweet);
       // takes return value and appends it to the tweets container
-      $("#tweets-container").append($tweet);
+      $("#tweets-container").prepend($tweet);
     }
   };
 
