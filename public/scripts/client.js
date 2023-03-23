@@ -87,12 +87,11 @@ $(document).ready(() => {
       method: "POST",
       //turns a set of form data into a query string
       data: $(this).serialize(),
-      success: function (tweetData) {
+      success: function () {
         // clear the tweet text area
         $("#tweet-text").val("");
-        // create a new tweet element and prepend it to the tweets container
-        const $tweet = createTweetElement(tweetData);
-        $("#tweets-container").append($tweet);
+        //refetch the tweets upon the submition
+        loadTweets();
       },
     });
   });
