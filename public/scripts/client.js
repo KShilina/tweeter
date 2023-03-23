@@ -1,12 +1,4 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
-// Test / driver code (temporary). Eventually will get this from the server.
-
-// Fake data taken from initial-tweets.json
+//The DOM is ready to be manipulated
 $(document).ready(() => {
   const tweetData = [
     {
@@ -48,7 +40,7 @@ $(document).ready(() => {
     console.log(tweetObj);
     //create tweet element
     let article = `<article class="tweet">
-   <header>
+        <header>
           <div>
             <img class="tweet-img" src="${tweetObj.user.avatars}"/>
             <span>${tweetObj.user.name}</span>
@@ -73,4 +65,22 @@ $(document).ready(() => {
   };
 
   renderTweets(tweetData);
+
+  // new tweet event listener
+  $("#tweet-form").submit(function (event) {
+    console.log("here");
+    // Stop form from submitting normally
+    event.preventDefault();
+
+    // Serialize the form data into a query string
+    let formData = $(this).serialize();
+
+    // submit POST request to server
+    $.ajax({
+      url: "/tweets",
+      method: "POST",
+      //serialized data sent to server
+      data: formData,
+    });
+  });
 });
