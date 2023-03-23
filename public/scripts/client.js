@@ -52,7 +52,7 @@ $(document).ready(() => {
         </p>
 
         <footer class="tweet-date">
-            <span>${tweetObj.created_at}</span>
+            <span>${timeago.format(tweetObj.created_at)}</span>
             <span class="icon">
               <i class="fa-solid fa-flag"></i>
               <i class="fa-solid fa-repeat"></i>
@@ -83,4 +83,15 @@ $(document).ready(() => {
       data: formData,
     });
   });
+
+  /*
+   * Makes a GET request to retrieve tweet history
+   * Returns array of tweets
+   */
+  const loadTweets = function () {
+    $.ajax("/tweets", { method: "GET" }).then(function (tweets) {
+      renderTweets(tweets);
+    });
+  };
+  loadTweets();
 });
