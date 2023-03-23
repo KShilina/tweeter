@@ -72,15 +72,28 @@ $(document).ready(() => {
     // Stop form from submitting normally
     event.preventDefault();
 
-    // Serialize the form data into a query string
-    let formData = $(this).serialize();
+    const tweetContent = $("#tweet-text").val();
+    // check if the tweet content(formData) is empty or exceeds 140 characters
+    if (tweetContent.length === 0) {
+      alert("Error: please make a tweet.");
+    } else if (tweetContent.length > 140) {
+      alert("Error: tweet content exceeds 140 characters.");
+      return;
+    }
 
     // submit POST request to server
     $.ajax({
       url: "/tweets",
       method: "POST",
-      //serialized data sent to server
-      data: formData,
+      //turns a set of form data into a query string
+      data: $(this).serialize(),
+      success: function (tweetData) {
+        // clear the tweet text area
+        $("#tweet-text").val("");
+        // create a new tweet element and prepend it to the tweets container
+        const $tweet = createTweetElement(tweetData);
+        $("#tweets-container").append($tweet);
+      },
     });
   });
 
