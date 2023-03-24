@@ -35,7 +35,7 @@ $(document).ready(() => {
       $("#tweets-container").prepend($tweet);
     }
   };
-
+  // Escape special chars in a string
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
@@ -72,18 +72,21 @@ $(document).ready(() => {
 
   renderTweets(tweetData);
 
-  // new tweet event listener
+  // Submit new tweet form
   $("#tweet-form").submit(function (event) {
-    console.log("here");
     // Stop form from submitting normally
     event.preventDefault();
 
     const tweetContent = $("#tweet-text").val();
+    $('.error').slideUp();
+
     // check if the tweet content is empty or exceeds 140 characters
     if (tweetContent.length === 0) {
-      alert("Error: please make a tweet.");
+      $('.error').text('⚠️Tweet is empty!⚠️').slideDown();
     } else if (tweetContent.length > 140) {
-      alert("Error: tweet content exceeds 140 characters.");
+      $('.error')
+        .text('⚠️Tweet content exceeds 140 characters.⚠️')
+        .slideDown();
       return;
     }
 
