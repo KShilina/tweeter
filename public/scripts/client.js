@@ -36,6 +36,12 @@ $(document).ready(() => {
     }
   };
 
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const createTweetElement = function (tweetObj) {
     console.log(tweetObj);
     //create tweet element
@@ -48,7 +54,7 @@ $(document).ready(() => {
           <span class="user-name"> "${tweetObj.user.handle}" </span>
         </header>
         <p>
-          "${tweetObj.content.text}"
+          "${escape(tweetObj.content.text)}"
         </p>
 
         <footer class="tweet-date">
@@ -73,7 +79,7 @@ $(document).ready(() => {
     event.preventDefault();
 
     const tweetContent = $("#tweet-text").val();
-    // check if the tweet content(formData) is empty or exceeds 140 characters
+    // check if the tweet content is empty or exceeds 140 characters
     if (tweetContent.length === 0) {
       alert("Error: please make a tweet.");
     } else if (tweetContent.length > 140) {
