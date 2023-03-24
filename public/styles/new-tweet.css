@@ -25,3 +25,14 @@
   font-weight: bold;
   font-family: 'Bungee', cursive;
 }
+
+.new-tweet .error {
+  border: solid;
+  border-width: thick 5px;
+  border-color: red;
+  font-style: italic;
+  color: red;
+  margin-bottom: 30px;
+  display: none;
+}
+
