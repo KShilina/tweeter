@@ -69,6 +69,15 @@ $(document).ready(() => {
 
     return article;
   };
+  //slide the whole new-tweet section up and down when the button is clicked
+  $(".btn-new-tweet").click(function () {
+    if ($(".new-tweet").is(":visible")) {
+      $(".new-tweet").slideUp();
+    } else {
+      $(".new-tweet").slideDown();
+    }
+  });
+  $(".new-tweet").slideUp();
 
   renderTweets(tweetData);
 
@@ -78,15 +87,13 @@ $(document).ready(() => {
     event.preventDefault();
 
     const tweetContent = $("#tweet-text").val();
-    $('.error').slideUp();
+    $(".error").slideUp();
 
     // check if the tweet content is empty or exceeds 140 characters
     if (tweetContent.length === 0) {
-      $('.error').text('⚠️Tweet is empty!⚠️').slideDown();
+      $(".error").text("⚠️Tweet is empty!⚠️").slideDown();
     } else if (tweetContent.length > 140) {
-      $('.error')
-        .text('⚠️Tweet content exceeds 140 characters.⚠️')
-        .slideDown();
+      $(".error").text("⚠️Tweet content exceeds 140 characters.⚠️").slideDown();
       return;
     }
 
