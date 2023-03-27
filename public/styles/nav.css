@@ -1,8 +1,8 @@
 nav {
   height: 120px;
   width: 100vw;
-  background-color: #4056A1;
-  color: #FFFFFF;
+  background-color: #4056a1;
+  color: #ffffff;
   padding-left: 1.5em;
   padding-right: 1.5em;
   display: flex;
@@ -12,13 +12,38 @@ nav {
 }
 
 .new-tweet-text {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.arrow-down-icon:hover {
+  color: darkred;
 }
 
 .arrow-down-icon {
   display: flex;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
   justify-content: center;
   color: red;
 }
 
+.arrow-down-icon {
+  animation-name: arrow-down-icon;
+  animation-timing-function: linear;
+}
+@keyframes arrow-down-icon {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
+.btn-new-tweet {
+  margin-bottom: 0.5em;
+}
