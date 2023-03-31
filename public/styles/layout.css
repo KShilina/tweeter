@@ -6,6 +6,7 @@
 html {
   box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
@@ -19,7 +20,6 @@ nav {
 /*
  * Global layout stuff
  */
-
 body {
   color: #545149;
   background-color: #f4f1ec;
@@ -30,14 +30,12 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-
 main {
   width: 90%;
   text-align: center;
   background-image: url("https://www.transparenttextures.com/patterns/crossword.png");
   margin-inline: auto;
   padding-bottom: 50px;
-  
 }
 
 .btn-arrow-up-icon {
@@ -47,7 +45,6 @@ main {
   color: white;
   width: 60px;
   height: 60px;
-  
 }
 
 div.toggle-btn-arrow-up {
@@ -57,7 +54,4 @@ div.toggle-btn-arrow-up {
   position: fixed;
   bottom: 20px;
   right: 50px;
-  
 }
-
-
