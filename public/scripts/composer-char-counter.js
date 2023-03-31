@@ -1,6 +1,5 @@
 $(document).ready(function () {
   $("textarea").on("input", function (event) {
-    //console.log($(this).parent().find(".counter"));
     let $counter = $(this).parent().find(".counter");
     let count = $(this).val().length;
 
