@@ -35,6 +35,7 @@ Apply techniques of responsive web design, including media queries.
 Refactor CSS by using and applying basic features of SASS.
 Create responsive designs by using media queries and flexbox.
 Interpret and execute on design specifications.
+
 Client Side JavaScript
 
 Write basic client-side JS to add dynamic content to pages.
