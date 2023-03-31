@@ -1,0 +1,40 @@
+//declare variable just for colors and fonts size
+
+//layout.css
+$bodyBackgroundColor: #f4f1ec;
+$bodyColor: #545149;
+$bodyFontSize: 24px;
+$btnArrowUpIconBackGroundColor:red;
+$btnArrowUpIconColor:white;
+
+//header.css
+$headerBackgroundColor:#f5d5b3;
+$usernameColor:#ffffff;
+
+//nav.css
+$navBackGroundColor:#4056a1;
+$navColor:#ffffff;
+$arrowDownColor:darkred;
+$arrowDownIconColor:red;
+$btnNewTweetColor:white;
+
+
+//new-tweet.css
+$newTweetBackGroundColor:#f4f1ec;
+$logoBtnBackGroundColor:#4056A1;
+$logoBtnColor:white;
+$newTweetErrorBorderColor:red;
+$newTweetError:red;
+
+//all-tweets.css
+$iconColor: rgb(25, 25, 160);
+$icnIhoverColor:orange;
+$articleTweetUserNameColor:grey;
+
+@mixin alignment {
+  display: flex;
+  justify-content: center;
+  
+}
+
+

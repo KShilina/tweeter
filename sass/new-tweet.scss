@@ -1,0 +1,40 @@
+@import 'variables';
+
+#tweet-form {
+  display: flex;
+  flex-direction: column;
+  
+}
+#tweet-text {
+  border-top-color: transparent;
+  background-color: $newTweetBackGroundColor;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-width: thin medium thick 5px;
+}
+
+.logo-btn {
+  display: flex;
+  background-color: $logoBtnBackGroundColor;
+  color: $logoBtnColor;
+  font-family: 'Bungee', cursive;
+}
+
+.tweet-counter {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  font-weight: bold;
+  font-family: 'Bungee', cursive;
+}
+
+.new-tweet .error {
+  border: solid;
+  border-width: thick 5px;
+  border-color: $newTweetErrorBorderColor;
+  font-style: italic;
+  color: $newTweetError;
+  margin-bottom: 30px;
+  display: none;
+}
+

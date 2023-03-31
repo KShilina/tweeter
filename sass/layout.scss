@@ -1,0 +1,60 @@
+@import 'variables.scss';
+
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+nav {
+  font-family: "Bungee", cursive;
+}
+
+/*
+ * Global layout stuff
+ */
+
+body {
+  color: $bodyColor;
+  background-color: $bodyBackgroundColor;
+  font-size: $bodyFontSize;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+
+main {
+  width: 90%;
+  text-align: center;
+  background-image: url("https://www.transparenttextures.com/patterns/crossword.png");
+  margin-inline: auto;
+  padding-bottom: 50px;
+}
+
+.btn-arrow-up-icon {
+  border-radius: 50%;
+  border: none;
+  background-color:$btnArrowUpIconBackGroundColor;
+  color: $btnArrowUpIconColor;
+  width: 60px;
+  height: 60px;
+}
+
+div.toggle-btn-arrow-up {
+  display: none;
+  justify-content: flex-end;
+  z-index: 10;
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+}

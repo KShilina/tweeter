@@ -1,0 +1,54 @@
+@import 'variables';
+
+article {
+  border: solid;
+  margin-top: 50px;
+  border-width: thick 5px;
+  padding: 1em;
+}
+
+article.tweet:hover {
+  box-shadow: 7px 7px 0 hwb(0 78% 22%);
+}
+
+.icon {
+  color:$iconColor;
+}
+
+.icon i:hover {
+  color: $icnIhoverColor;
+}
+
+article.tweet footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+article.tweet header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+article.tweet header div {
+  display: flex;
+  align-items: center;
+}
+
+article.tweet header div img {
+  margin-right: 0.5em;
+}
+
+#tweet-text {
+  margin-left: 15px;
+}
+
+article.tweet p {
+  border-bottom: 7px solid grey;
+  padding: 1em;
+}
+
+article.tweet .user-name {
+  opacity: 0.4;
+  color: $articleTweetUserNameColor;
+}

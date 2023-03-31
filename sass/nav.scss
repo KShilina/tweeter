@@ -1,0 +1,86 @@
+@import 'variables';
+
+
+
+nav {
+  height: 120px;
+  width: 100vw;
+  background-color: $navBackGroundColor;
+  color: $navColor;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  padding-top: 1.5em;
+
+  @media screen and (max-width: 1023px) {
+    nav {
+      background-color: transparent;
+    }
+  }
+  .new-tweet-text {
+    font-family: "Source Sans Pro", sans-serif;
+    .btn-new-tweet {
+      margin-bottom: 0.5em;
+      background-color: transparent;
+      border: none;
+      color: $btnNewTweetColor;
+    }
+
+    .arrow-down-icon:hover {
+      color: $arrowDownColor;
+    }
+    
+    .arrow-down-icon {
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      transform-origin: bottom;
+      color: $arrowDownIconColor;
+      @include alignment;
+    }
+    
+    .arrow-down-icon {
+      animation-name: arrow-down-icon;
+      animation-timing-function: linear;
+    }
+
+  }
+
+
+
+}
+
+
+
+
+@keyframes arrow-down-icon {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+@media screen and (min-width: 1024px) {
+  .header {
+    padding-top: 0px;
+    height: 300px; 
+    margin: 150px 100px 0 30px;
+  }
+
+  main {
+    margin: 150px 100px 0 30px;
+  }
+  .content {
+    display: flex;
+  }
+}
