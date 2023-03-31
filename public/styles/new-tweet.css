@@ -1,8 +1,8 @@
 #tweet-form {
   display: flex;
   flex-direction: column;
-  
 }
+
 #tweet-text {
   border-top-color: transparent;
   background-color: #f4f1ec;
@@ -15,7 +15,7 @@
   display: flex;
   background-color: #4056A1;
   color: white;
-  font-family: 'Bungee', cursive;
+  font-family: "Bungee", cursive;
 }
 
 .tweet-counter {
@@ -23,7 +23,7 @@
   justify-content: space-between;
   margin-top: 15px;
   font-weight: bold;
-  font-family: 'Bungee', cursive;
+  font-family: "Bungee", cursive;
 }
 
 .new-tweet .error {
@@ -35,4 +35,3 @@
   margin-bottom: 30px;
   display: none;
 }
-
