@@ -1,15 +1,16 @@
 .header {
-  display: flex;
-  height: 520px;
+  height: 400px;
   width: 100%;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding-top: 140px;
+  padding-top: 60px;
   background-color: #f5d5b3;
   background-image: url("https://www.transparenttextures.com/patterns/crossword.png");
+  display: flex;
+  justify-content: center;
 }
+
 .user-name {
-  font-family: 'Source Sans Pro', sans-serif;
-  color: #FFFFFF;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #ffffff;
 }
