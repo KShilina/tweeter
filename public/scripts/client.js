@@ -26,7 +26,6 @@ $(document).ready(() => {
   ];
   //This function responsible for taking in an array of tweet objects and then appending each one to the #tweets-container
   const renderTweets = function (tweets) {
-    console.log(tweets);
     // loops through tweets
     for (let tweet of tweets) {
       // calls createTweetElement for each tweet
@@ -43,7 +42,6 @@ $(document).ready(() => {
   };
 
   const createTweetElement = function (tweetObj) {
-    console.log(tweetObj);
     //create tweet element
     let article = `<article class="tweet">
         <header>
@@ -104,7 +102,6 @@ $(document).ready(() => {
       //turns a set of form data into a query string
       data: $(this).serialize(),
       success: function () {
-        // clear the tweet text area
         $("#tweet-text").val("");
         //refetch the tweets upon the submition
         loadTweets();
