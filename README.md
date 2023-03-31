@@ -7,6 +7,7 @@ Throughout this project, the following skills and concepts were applied: front-e
 
 ## Demo
 
+![ezgif com-optimize (1)](https://user-images.githubusercontent.com/91483856/229029018-d4495336-9c9e-4f9b-a1b1-f0308391bdfc.gif)
 
 ## Getting Started
 
